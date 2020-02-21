@@ -92,7 +92,7 @@ public class Sales {
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             con.setRollbackOnException(false);
-            String sql = "INSERT INTO sales (productname,customername,paymentstatus,quantity,unitprice) VALUES (:productname, :customername, :paymentstatus, :quantity, :unitprice,)";
+            String sql = "INSERT INTO sales (productname,customername,paymentstatus,quantity,unitprice) VALUES (:productname, :customername, :paymentstatus, :quantity, :unitprice)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("productname", this.productname)
                     .addParameter("customername", this.customername)

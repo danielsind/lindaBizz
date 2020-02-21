@@ -1,0 +1,27 @@
+{{#partial "content"}}
+    <div class="section">
+        <div class="form-left">
+            <h2>Sales</h2>
+        </div>
+        <div class="form-right">
+            <h3>Add a Sale</h3>
+            <form action="/sales/new" method="post" name="salesForm" class="form">
+                <label for="productname">Product Name</label>
+                <input class="form-control input" type="text" placeholder="Enter the product name..." name="productname" id="productname" autocomplete="on">
+                <label for="customername">Customer Name</label>
+                <input class="form-control input" type="text" placeholder="Enter Customer name" name="customername" id="customername">
+                <select class="form-control input" name="paymentstatus">
+                    <option label="paymentstatus" hidden disabled selected value>Payment Status </option>
+                    <option value="Payed">Payed</option>
+                    <option value="Credited">Credited</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <input class="form-control input" type="number" placeholder="Enter Quantity" name="quantity" id="quantity" >
+                <label for="unitprice">Unit Price</label>
+                <input class="form-control input" type="unitprice" placeholder="Enter Unit Price" name="unitprice" id="unitprice" >
+                <button type="submit" class="button">Add</button>
+            </form>
+        </div>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,36 @@
+{{#partial "content"}}
+    <div class="pages">
+        <h2 class="text-center">Purchases</h2>
+    {{#if purchase}}
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Merchant Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                    </thead>
+                    {{#each purchase }}
+                        <tbody>
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{ productname}}</td>
+                            <td>{{ merchantname }}</td>
+                            <td> {{quantity}}</td>
+                            <td>{{unitprice}}</td>
+                        </tr>
+                        </tbody>
+                    {{/each}}
+                </table>
+            </div>
+            <a href="/purchase/form"  class="otherbuttons"><span style="color:blue;">****Go Make Purchase***</span></a>
+
+    {{else}}
+            <h2>You Have Made No Purchases Yet!!!!!!</h2>
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

@@ -80,7 +80,7 @@ public class Purchase {
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             con.setRollbackOnException(false);
-            String sql = "INSERT INTO purchase (productname,merchantname,quantity,unitprice) VALUES (:productname, :merchantname, :quantity, :unitprice,)";
+            String sql = "INSERT INTO purchase (productname,merchantname,quantity,unitprice) VALUES (:productname, :merchantname, :quantity, :unitprice)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("productname", this.productname)
                     .addParameter("merchantname", this.merchantname)

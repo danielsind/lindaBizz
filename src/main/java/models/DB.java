@@ -1,4 +1,4 @@
-package da;
+package models;
 
 import org.sql2o.*;
 
